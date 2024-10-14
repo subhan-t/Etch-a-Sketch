@@ -1,6 +1,6 @@
-let gridDimension = 5;
+let gridDimension = 100;
 
-let squareSize = (960 / gridDimension / 960) * 100;
+let squareSize = (900 / gridDimension / 900) * 100;
 
 for (let y = 0; y < gridDimension; y++) {
   const container = document.querySelector(".container");
@@ -19,3 +19,18 @@ row.forEach((row) => {
     row.appendChild(square);
   }
 });
+
+const pixel = document.querySelectorAll(".pixel");
+pixel.forEach((pixel) => {
+  pixel.addEventListener("mouseenter", () => {
+    let bgColor = randomRgbColor();
+    pixel.style.backgroundColor = bgColor;
+  });
+});
+
+function randomRgbColor() {
+  let r = Math.floor(Math.random() * 256); // Random between 0-255
+  let g = Math.floor(Math.random() * 256); // Random between 0-255
+  let b = Math.floor(Math.random() * 256); // Random between 0-255
+  return "rgb(" + r + "," + g + "," + b + ")";
+}
