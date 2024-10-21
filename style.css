@@ -1,5 +1,17 @@
 .container {
 	display: flex;
+	justify-content: space-between;
+	border: solid, 4px, darkgrey;
+	padding: 4px;
+}
+
+.controls {
+	border: solid, 2px, red;
+	padding: 2rem;
+}
+
+.sketchpad {
+	display: flex;
 	flex-direction: column;
 	width: 900px;
 	aspect-ratio: 1 / 1;
